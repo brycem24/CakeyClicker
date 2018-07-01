@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+	    <title>Cakey Clicker</title>
+	    <meta charset="UTF-8">
+	    <meta name="author" content="Bryce MacInnis">
+	    <meta name="description" content="Create a page that uses Javascript to make a simple clicking game">
+	    <link href="resources/css/2.04H-CakeyClicker-MacInnis.css" rel="stylesheet" type="text/css" />
+	    <!--
+			Created:	25. February 2018										- Drapak
+			Modified:	5. March 2018 Project is redone.						- MacInnis
+						6. March 2018 Character selection added					- Macinnis
+						8. March 2018 Enemies were added						- MacInnis
+						9. March 2018 Enemies move towards the player			- MacInnis
+						10. March 2018 Music was added							- MacInnis
+						12. March 2018 Killing enemies is now possible			- MacInnis
+						13. March 2018 Game over screen added					- MacInnis
+						14. March 2018 Fixed bug where you died before the game began.	-MacInnis
+						15. March 2018 Score was added.							- MacInnis
+						18. March 2018 Style was improved, comments added.		- MacInnis
+			Finished:	18. March 2018
+		-->
+	    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	</head>
+	<body id="bodyID">
+	    <!-- The assignment: Create a page that uses Javascript to make a simple clicking game
+			Evaluation
+			___/10 HTML-CSS: including ANY TEN of the following:
+				[ ]	a <span>
+				[X]	a heading
+				[ ]	a table
+				[ ]	a div for output
+				[ ]	a descriptive paragraph
+				[X] a list
+
+				The following MUST be applied inside <style>:
+
+				[X]	applying a style to a tag
+				[X]	applying a style to an #ID or .class
+				[X]	applying a color, opacity, or background color
+				[X]	applying a border
+				[X]	applying a font size
+				[X]	applying the font family, style, or weight
+				[X]	applying the width
+				[X]	applying text-align or vertical-align
+				[X]	applying a position
+				[X]	applying a top measurement
+				[X]	applying a left measurement
+				[ ] applying a display style
+				[X] applying margin-left or margin-right
+
+			___/10 INPUT: including ANY FOUR of the following:
+				[ ]	a text area box
+				[X]	an input line
+				[X]	buttons
+				[X]	things that work with document.getElementById().onclick
+				[X]	things that work with document.getElementById().onchange
+
+			___/10 PROCESS: including:
+				[X]	successfully reading a text input
+				[X]	assigning a variable
+				[X]	using basic math
+				[X]	using parseInt()
+
+			___/10 OUTPUT: including ANY FOUR of the following:
+				[X]	changing the color or background using Javascript
+				[X]	changing the weight or style of a font using Javascript
+				[ ]	changing the size of a font using Javascript
+				[X]	changing the top or left position of something using Javascript
+				[ ]	changing the border or width of something using Javascript
+				[X]	output using .innerHTML
+
+			___/10 STYLE: honouring all //STYLE sections to date
+		-->
+	    <div id="gameWindowID">
+	        <h1>Save the puppy!</h1>
+	        <img id="pugID" alt="puppy" src="resources/images/pug.gif">
+	        <img id="monsterID" class="monsterClass" alt="monster" src="resources/images/monster.png">
+	        <img id="monsterID1" class="skeletonClass" alt="skeleton" src="resources/images/skeleton.png">
+	        <img id="monsterID2" class="monsterClass" alt="monster" src="resources/images/monster.png">
+	        <img id="monsterID3" class="skeletonClass" alt="monster" src="resources/images/skeleton.png">
+	        <h3 id="scoreID">Score:</h3>
+	        <ul id="creditsID">
+	            <li>Created by: Bryce MacInnis</li>
+	            <li>
+	                For: <span id="highlightID">Mr. Drapak</span>
+	            </li>
+	            <li>Submitted: March 19. 2018</li>
+	        </ul>
+	    </div>
+	    <div id="startModalID">
+	        <h1 id="modalTitleID">Tell me...</h1>
+	        <input id="nameLabelID" placeholder="What's your name?">
+	        <input id="dogLabelID" placeholder="What kind of dog are you?">
+	        <button type="button" id="startButtonID">Start</button>
+	        <p id="availableDogsID">Available dogs: Shiba, Pug, Labrador</p>
+	    </div>
+	    <div id="deathModalID">
+	        <h1 id="gameOverID">Game over...</h1>
+	    </div>
+	    <audio controls autoplay hidden>
+	        <source src="resources/audio/strawberry.mp3" type="audio/mpeg">
+	        Your browser does not support the audio element.
+	    </audio>
+	    <script src="resources/js/2.04H-CakeyClicker-MacInnis.js"></script>
+	</body>
+</html>

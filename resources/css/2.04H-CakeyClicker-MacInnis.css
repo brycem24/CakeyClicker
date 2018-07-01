@@ -1,0 +1,240 @@
+/* Appears to vibrate an image */
+@keyframes hurtAnimation {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+body {
+    background-color: black;
+}
+
+#gameWindowID {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -240px 0 0 -240px;
+    width: 480px;
+    height: 480px;
+    border: 2px solid black;
+    visibility: hidden;
+
+    /* Don't allow the user to interact with this page
+        e.g., no dragging, no touching, no selecting  */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#startModalID {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -240px;
+    width: 480px;
+    height: 300px;
+    border: 4px solid brown;
+    background-color: sienna;
+
+    /* Don't allow the user to interact with this page
+        e.g., no dragging, no touching, no selecting  */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#deathModalID {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: black;
+
+    /* Don't allow the user to interact with this page
+        e.g., no dragging, no touching, no selecting  */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    color: brown;
+    position: relative;
+    top: -65px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#scoreID {
+    color: brown;
+    position: relative;
+    top: 425px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+ul {
+    /* Remove the bullet points from lists */
+    list-style: none;
+}
+
+#creditsID {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    top: 425px;
+    left: 0px;
+}
+
+#dogLabelID {
+    color: black;
+    background-color: white;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    
+    width: 400px;
+    height: 30px;
+    border: 2px solid black;
+    top: 30px;
+    left: 0px;
+
+    /* Make sure the form input is a certain width/height */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
+#nameLabelID {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    top: 30px;
+    left: 0px;
+
+    /* Make sure the form input is a certain width/height */
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#startButtonID {
+    position: relative;
+    top: 50px;
+    width: 275px;
+    height: 40px;
+    border: black;
+    background: #fff;
+    border: 2px solid #000;
+    font-family: 'Press Start 2P', cursive;
+
+    /* Make sure the form input is a certain width/height */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#pugID {
+    /* Don't allow the user to interact with this entity
+    e.g., no dragging, no touching, no selecting  */
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    position: absolute;
+    width: 96px;
+}
+
+#highlightID {
+    color: brown;
+}
+
+#modalTitleID {
+    top: 25px;
+}
+
+#gameOverID {
+    color: white;
+    top: 250px;
+}
+
+#availableDogsID {
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    top: 80px;
+    left: 100px;
+}
+
+#detailID {
+    color: white;
+    text-shadow: 0 1px black, 1px 0 black;
+}
+
+.monsterClass {
+    /* Don't allow the user to interact with this entity
+    e.g., no dragging, no touching, no selecting  */
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
+    /* Width of the monster sprite scaled down */
+    position: absolute;
+    width: 56px;
+}
+
+.skeletonClass {
+     /* Don't allow the user to interact with this entity
+    e.g., no dragging, no touching, no selecting  */
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
+    /* Width of the skeleton sprite scaled down */
+    position: absolute;
+    width: 48px;
+}
